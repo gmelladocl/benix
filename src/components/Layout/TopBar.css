@@ -1,0 +1,31 @@
+.topbar {
+  height: var(--topbar-height);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+.topbar-left {}
+
+.topbar-greeting {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: -0.3px;
+}
+
+.topbar-greeting span {
+  color: var(--blue);
+}
+
+.topbar-date {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: capitalize;
+  margin-top: 2px;
+}

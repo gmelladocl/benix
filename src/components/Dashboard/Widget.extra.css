@@ -1,0 +1,181 @@
+/* Campaign rows */
+.meta-campaigns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campaign-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  gap: 12px;
+}
+
+.campaign-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.campaign-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* Week grid */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.week-day {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 60px;
+}
+
+.week-day-header {
+  text-align: center;
+  padding: 6px 4px;
+  border-radius: var(--radius-sm);
+  background: var(--cream);
+}
+
+.week-day.today .week-day-header {
+  background: var(--dark);
+}
+
+.week-day-name {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.week-day.today .week-day-name {
+  color: rgba(237,237,229,0.6);
+}
+
+.week-day-num {
+  display: block;
+  font-family: var(--font-brand);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.week-day.today .week-day-num {
+  color: var(--cream);
+}
+
+.week-day-events {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.week-event {
+  background: var(--blue-light);
+  border-left: 2px solid var(--blue);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 3px 5px;
+}
+
+.event-time {
+  display: block;
+  font-size: 10px;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.event-title {
+  display: block;
+  font-size: 10px;
+  color: var(--mid);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Meetings */
+.meetings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.meeting-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--cream-dark);
+  position: relative;
+}
+
+.meeting-row:last-child {
+  border-bottom: none;
+}
+
+.meeting-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  width: 52px;
+}
+
+.meeting-date {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.meeting-hour {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.meeting-info {
+  flex: 1;
+}
+
+.meeting-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.meeting-attendees {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meeting-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 6px;
+}

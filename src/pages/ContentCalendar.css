@@ -1,0 +1,169 @@
+.cal-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cal-month-label {
+  font-family: var(--font-brand);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark);
+  min-width: 180px;
+  text-align: center;
+}
+
+.calendar-wrapper {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.cal-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: var(--dark);
+}
+
+.cal-day-name {
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(237,237,229,0.6);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: none;
+}
+
+.cal-cell {
+  min-height: 110px;
+  padding: 10px;
+  border-right: 1px solid var(--cream-dark);
+  border-bottom: 1px solid var(--cream-dark);
+  cursor: pointer;
+  transition: background var(--transition);
+  position: relative;
+}
+
+.cal-cell:nth-child(7n) {
+  border-right: none;
+}
+
+.cal-cell:hover {
+  background: rgba(79,127,250,0.03);
+}
+
+.cal-cell-empty {
+  background: rgba(0,0,0,0.01);
+  cursor: default;
+}
+
+.cal-cell-today .cal-day-num {
+  background: var(--dark);
+  color: var(--cream);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.cal-day-num {
+  font-family: var(--font-brand);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mid);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cal-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cal-post-badge {
+  font-size: 11px;
+  color: white;
+  padding: 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  transition: opacity var(--transition);
+}
+
+.cal-post-badge:hover {
+  opacity: 0.85;
+}
+
+.cal-post-more {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  padding-left: 4px;
+}
+
+/* Emoji picker */
+.emoji-picker {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 50;
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  width: 220px;
+}
+
+.emoji-btn {
+  font-size: 20px;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: background var(--transition);
+  text-align: center;
+}
+
+.emoji-btn:hover {
+  background: var(--cream-dark);
+}
+
+/* Files */
+.files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  font-size: 13px;
+}
